@@ -241,7 +241,7 @@ export class mwn {
 
 		// keep-alive pools and reuses TCP connections, for better performance
 		httpAgent: new http.Agent({ keepAlive: true }),
-		httpsAgent: new https.Agent({ keepAlive: true }),
+		httpsAgent: new https.Agent({ keepAlive: true, rejectUnauthorized: false }),
 
 		timeout: 60000, // 60 seconds
 	};
